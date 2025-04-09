@@ -1,0 +1,314 @@
+/* import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+/* General styles */
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 3;
+    background-color: #f8f9fa; /*off-white background*/
+    color: #333;
+}
+
+/* Header section*/
+header {
+    background-color: #6ab7ff;
+    color: #36454f;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+    padding-left: 20px;
+    /* Space for star */
+}
+
+nav ul li::before {
+    content: "★";
+    /* Star symbol */
+    color: #ffd700;
+    /* Gold color */
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a9a9a9;
+}
+
+/* Project List with Stars */
+ul {
+    list-style: none;
+    /* Remove default bullets */
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    /* Space for star */
+}
+
+ul li::before {
+    content: "★";
+    /* Star symbol */
+    color: #ffd700;
+    /* Gold */
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+/* Section */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-radius: 18px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+    animation: slideIn 0.8s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a subtle glow effect on hover */
+section:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Add a glowing border effect */
+section::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: linear-gradient(45deg, rgba(0, 170, 255, 0.3), rgba(255, 0, 170, 0.3));
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+section:hover::before {
+    opacity: 1;
+}
+
+/* Smooth slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+    section {
+        max-width: 90%;
+        padding: 2rem;
+    }
+}
+
+section h2 {
+    color: #6495ed;
+    text-align: center;
+    font-weight: 600;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+    background: linear-gradient(135deg, #0056b3, #00a2e8);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6ab7ff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #d4ebff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Contact page*/
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 1.5rem auto;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    color: #6ab7ff;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6ab7ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 183, 255, 0.5);
+}
+
+/* Social Media Icons */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #6ab7ff;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #5aa5e8;
+    transform: scale(1.1);
+}
+/* WhatsApp Button */
+.whatsapp-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #25d366;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebd58;
+    transform: scale(1.05);
+}
